@@ -3,27 +3,33 @@
 /**
  * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
  *
- * Return: Always 0.
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int count;
-	long num1 = 0, num2 = 1, sum;
+	int count = 3;
 
-	for (count = 0; count < 50; count++)
+	long int first = 1, second = 2;
+	long int next = first + second;
+
+	printf("%lu, ", first);
+	printf("%lu, ", second);
+
+	while (count <= 50)
 	{
-		sum = num1 + num2;
-		printf("%lu", sum);
+		if (count == 50)
+		{
+			printf("%lu \n", next);
+		} else
+		{
+			printf("%lu, ", next);
+		}
+		first = second;
+		second = next;
 
-		num1 = num2;
-		num2 = sum;
-
-		if (count == 49)
-			printf('\n');
-		else
-			printf(', ');
+		next = first + second;
+		count++;
 	}
-
 	return (0);
 }
