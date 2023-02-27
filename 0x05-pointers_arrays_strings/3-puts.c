@@ -8,11 +8,11 @@
 
 void _puts(char *str)
 {
-	char string[];
+	int i;
 
-	for (str = string; *str != '\0'; str++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		printf("%c", *str);
+		_putchar(str[i]);
 	}
-	printf("\n");
+	_putchar('\n');
 }
