@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_array - Entry point
  * Description: a function that prints n elements of an array of integers
