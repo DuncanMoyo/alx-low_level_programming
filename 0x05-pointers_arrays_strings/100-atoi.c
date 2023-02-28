@@ -9,27 +9,20 @@
 
 int _atoi(char *s)
 {
-	int i = 0;
-	unsigned int j = 0;
-	int k = 1;
-	int l = 0;
+	unsigned int i = 0;
+	int j = 1;
 
-	while (s[i])
-	{
-		if (s[i] == 45)
+	do {
+		if (*s == '-')
 		{
-			k *= -1;
-		}
-		while (s[i] >= 48 && s[i] <= 57)
+			j *= -1;
+		} else if (*s >= '0' && *s <= '9')
 		{
-			l = 1;
-			j *= 10 + (s[i] - '0');
-			i++;
-		}
-		if (l == 1)
+			i = (i * 10) + (*s - '0');
+		} else if (i > 0)
 		{
 			break;
 		}
-		i++;
-	}
+	} while (*s++);
+	return (i * j);
 }
