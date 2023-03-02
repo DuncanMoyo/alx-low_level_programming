@@ -16,7 +16,7 @@ char *rot13(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; c[j] != '\0'; j++)
+		for (j = 0; x[j] != '\0'; j++)
 		{
 			if (c[i] == x[j])
 			{
