@@ -13,7 +13,7 @@ char *leet(char *c)
 	char remove[] = "aAeEoOtTlL";
 	char put[] = "4433007711";
 
-	for (i = o; c[i] != '\0'; i++)
+	for (i = 0; c[i] != '\0'; i++)
 	{
 		for (j = 0; remove[j] != '\0'; j++)
 		{
