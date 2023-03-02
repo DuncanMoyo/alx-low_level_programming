@@ -14,16 +14,19 @@ char *rot13(char *c)
 	char x[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char y[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; c[i] != '\0'; i++)
+	i = 0;
+
+	while (c[i])
 	{
-		for (j = 0; x[j] != '\0'; j++)
+		for (j = 0; j < 52; j++)
 		{
 			if (c[i] == x[j])
 			{
-				c[i] == y[j];
+				c[i] = y[j];
 				break;
 			}
 		}
+		i++;
 	}
-	return (0);
+	return (c);
 }
