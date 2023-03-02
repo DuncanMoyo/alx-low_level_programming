@@ -9,7 +9,7 @@
 
 char *string_toupper(char *c)
 {
-	int i, count;
+	int i;
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
@@ -18,9 +18,5 @@ char *string_toupper(char *c)
 			c[i] -= 32;
 		}
 	}
-	for (count = 0; c[count] != '\0'; count++)
-	{
-		_putchar(c[count]);
-	}
-	return (0);
+	return (c);
 }
