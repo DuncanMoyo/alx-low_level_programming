@@ -7,7 +7,7 @@
  * Return: capitalised string
  */
 
-char *cap_string(char *)
+char *cap_string(char *c)
 {
 	int i;
 
@@ -17,7 +17,20 @@ char *cap_string(char *)
 	}
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (c[i] == ' ' || c[i] == '\t' || c[i] == '\n' || c[i] == ',' || c[i] == ';' || c[i] == '.' || c[i] == '!' || c[i] == '?' || c[i] == '"' || c[i] == '(' || c[i] == ')' || c[i] == '{' || c[i] == '}')
+		if (
+				c[i] == ' ' ||
+				c[i] == '\t' ||
+				c[i] == '\n' ||
+				c[i] == ',' ||
+				c[i] == ';' ||
+				c[i] == '.' ||
+				c[i] == '!' ||
+				c[i] == '?' ||
+				c[i] == '"' ||
+				c[i] == '(' ||
+				c[i] == ')' ||
+				c[i] == '{' ||
+				c[i] == '}')
 		{
 			if (c[i + 1] >= 'a' && c[i + 1] <= 'z')
 			{
