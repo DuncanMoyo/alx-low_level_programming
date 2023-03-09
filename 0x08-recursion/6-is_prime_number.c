@@ -3,10 +3,11 @@
 /**
  * is_prime_number - returns 1 if the input integer is a prime number
  * @n: integer to be assessed
+ * @i: check for prime number
  * Return: boolean value
  */
 
-int is_prime_number(int n)
+int is_prime_number(int n, int i)
 {
 	if (n <= 1)
 	{
