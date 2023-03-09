@@ -14,7 +14,8 @@ int is_palindrome(char *s)
 	if (str <= 1)
 	{
 		return (1);
-	} else if (s[0] != s[str - 1])
+	}
+	if (s[0] != s[str - 1])
 	{
 		return (0);
 	}
