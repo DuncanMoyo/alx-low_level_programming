@@ -13,6 +13,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	if (d == NULL)
 	{
 		printf("Error: Null pointer passed to init_dog\n");
+		return;
 	}
 	d->name = name;
 	d->age = age;
