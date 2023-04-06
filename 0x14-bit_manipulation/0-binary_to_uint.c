@@ -7,6 +7,13 @@
  * there is one or more chars in the string b that is not 0 or 1
  */
 
+/*
+ * number * 2: multiplies the current value of num by 2
+ * b[i] - '0': converts the current character to a number.
+ * 1 has an ASCII value of 49 and 0 has an ASCII value of 48
+ * so if you subtract '0' you should either get 0 or 1.
+ */
+
 unsigned int binary_to_uint(const char *b)
 {
 	/* number will show the result of the convert */
@@ -20,13 +27,15 @@ unsigned int binary_to_uint(const char *b)
 	{
 		return (0);
 	}
-
+	/* loops iterates through characters of the strinf */
 	for (i = 0; b[i]; i++)
 	{
+		/* checks if the characters are either '0' or '1' */
 		if (b[i] != '0' && b[i] != '1')
 		{
 			return (0);
 		}
+		/* adds the integer to the current character */
 		number = number * 2 + (b[i] - '0');
 	}
 	return (number);
